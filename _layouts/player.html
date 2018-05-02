@@ -9,9 +9,18 @@ layout: default
 	
 	{% if page.profile_gfy %}
 		<figure class="entry-gfy">
-			<div class="gfyitem" data-id="{{ page.profile_gfy }}" data-autoplay="true"/>
+			<div class="gfyitem" data-autoplay="true" data-id="{{ page.profile_gfy }}" />
 		</figure>
 	{% endif %}
+	
+	<div class="social-icons">
+	{% if page.twitter %}
+        <a class="icon" href="{{ page.twitter }}"><i class="fa fa-twitter"></i></a>
+    {% endif %}
+	{% if page.twitch %}
+        <a class="icon" href="{{ page.twitch }}"><i class="fa fa-twitch"></i></a>
+    {% endif %}
+	</div>
 	
 	<a class="twitter-moment" 
 	href={{ page.moment_link }} 

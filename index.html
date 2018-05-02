@@ -1,9 +1,42 @@
 ---
 layout: default
-Title: Top
+title: Top
 ---
+
 <div class="well">
 
+	<script type="text/javascript">
+		
+	var gfyArray = [
+	{% for gif in site.data.gifs %}
+	"{{ gif.gfyid }}",
+	{% endfor %}
+	];
+
+	function getGfyTag(id) {
+		var gfy = '<figure class="entry-gfy">';
+		gfy += '<div class="gfyitem" data-expand="true" data-autoplay="true" data-id="';
+		gfy += id;
+		gfy += '" /></figure>';
+		return gfy;
+	}
+
+	function shuffle(sourceArray) {
+		for (var i = 0; i < sourceArray.length - 1; i++) {
+			var j = i + Math.floor(Math.random() * (sourceArray.length - i));
+
+			var temp = sourceArray[j];
+			sourceArray[j] = sourceArray[i];
+			sourceArray[i] = temp;
+		}
+		return sourceArray;
+	}
+
+	var shuffledArray = shuffle(gfyArray);
+	document.write(getGfyTag(shuffledArray[0]));
+	  
+	</script>
+	<br/>
     <a class="twitter-timeline" 
 	href="https://twitter.com/search?q=from%3AHiFightTH%20Filter%3Avideos%20-filter%3Anativeretweets" 
 	data-widget-id="991561681225465857" 

@@ -10,6 +10,11 @@
     "icon": "fa-users",
   },
   {
+    "text": "Gifs",
+    "url": "/gifs/",
+    "icon": "fa-image",
+  },
+  {
     "text": "About",
     "url": "/about/",
     "icon": "fa-comments"
