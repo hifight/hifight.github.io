@@ -37,5 +37,13 @@ layout: null
         {% endfor %}
       </item>
     {% endfor %}
+	
+	<item>
+		<title>Daigo Umehara</title>
+		<link>
+				{{ site.url }}/player/daigo_umehara
+		</link>
+	</item>
+	
   </channel>
 </rss>
