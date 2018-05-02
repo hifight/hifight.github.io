@@ -220,6 +220,8 @@ footer {
     position: absolute;
     right: 12px;
 }
-ul.player-list {
-    list-style-type: circle;
+.entry-gfy{
+	position:relative;
+	margin-left:auto;
+	margin-right:auto;
 }

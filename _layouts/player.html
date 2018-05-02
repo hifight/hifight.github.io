@@ -3,8 +3,16 @@ layout: default
 ---
 <div class="post-content well">
 
-	<img class="row-picture" src="/static/img/player/{{ page.profile_pic }}">
-
+	{% if page.profile_pic %}
+		<img class="row-picture" src="/static/img/player/{{ page.profile_pic }}">
+	{% endif %}
+	
+	{% if page.gfy %}
+		<figure class="entry-gfy">
+			<div class="gfyitem" data-id="{{ page.gfy }}" data-autoplay="true"/>
+		</figure>
+	{% endif %}
+	
 	<a class="twitter-moment" 
 	href={{ page.moment_link }} 
 	data-chrome="noheader nofooter noborders noscrollbar">>
