@@ -1,17 +1,17 @@
-title: John Smith
-description: My Personal Blog
-author: John Smith
-logo: /hcz-jekyll-blog/static/img/avatar.png
-github: https://github.com/codeasashu
-about: Freelance developer
+title: 			HiFight
+description: 	Fighting Games Highlight
+author: 		@HiFightTH
+logo: /static/img/avatar.png
+github: 
+about: 
 
-baseurl: "https://codeasashu.github.io/hcz-jekyll-blog"
-url: "https://codeasashu.github.io/hcz-jekyll-blog"
+baseurl: "https://hifight.github.io/"
+url: "https://hifight.github.io/"
 
 allowsearch: true
 
-disqus_shortname: aboutashu
-google_analytics: UA-72862926-1
+disqus_shortname: 
+google_analytics: 
 
 share:
   twitter_username: \#
