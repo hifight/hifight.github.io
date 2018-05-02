@@ -27,5 +27,12 @@ layout: null
       </item>
     {% endfor %}
 	
+    {% for player in site.data.players %}
+	<item>
+		<title>{{ player.name }}</title>
+		<link>{{ site.url }}/player/{{ player.link}}</link>
+	</item>
+    {% endfor %}
+	
   </channel>
 </rss>

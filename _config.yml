@@ -1,9 +1,9 @@
 title: 			HiFightTH
 description: 	Fighting Games Highlight
 author: 		HiFightTH
-logo: /static/img/hifight_avatar.jpg
+logo: 			/static/img/hifight_avatar.jpg
 github: 
-about: Fighting Games Highlight
+about: 			Fighting Games Highlight
 
 #baseurl: "https://hifight.github.io"
 url: 		"https://hifight.github.io"

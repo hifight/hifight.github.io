@@ -220,3 +220,6 @@ footer {
     position: absolute;
     right: 12px;
 }
+ul.player-list {
+    list-style-type: circle;
+}
