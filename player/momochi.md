@@ -9,7 +9,7 @@ twitch: "https://www.twitch.tv/momochoco"
 hifight: “Hit Confirm,Whiff Punish”
 ---
 
-Capcom Cup 2014 and EVO 2015 Ultra Street Fighter IV Champion. Famouse for his amazing neutral/ground game, hit confirm and whiff punish. In Street Fighter V, he main Ken in S1 and S2 (also play Ibuki) but changed to Kolin in Arcade Edition.
+Capcom Cup 2014 and EVO 2015 Ultra Street Fighter IV Champion. Famouse for his amazing neutral/ground game, hit confirm and whiff punish. In Street Fighter V, he main Ken in S1 and S2 (also play Ibuki) but changed to Kolin in Arcade Edition. Outside of Street Fighter series, Momochi also played Ultimate Marvel vs Capcom 3 competetively before and currently compete in Dragon Ball FighterZ as well.
 
 Aside from competing, Momochi and Chocoblanka also found SHINOBISM gaming team called Fudoh (不動) and Kacho-Fugetsu (花鳥風月). Fudoh is a Street Fighter gaming team consist of strong players like Haitani, Fujimura, Otani and Momochi’s students Johny, Haku and Yamaguchi.
 
