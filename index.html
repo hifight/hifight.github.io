@@ -5,52 +5,73 @@ title: Top
 
 <div class="well">
 
+	<h2>HiFight's GIF</h2>
 	<script type="text/javascript">
-		
-	var gfyArray = [
-	{% for gif in site.data.gifs %}
-	"{{ gif.gfyid }}",
-	{% endfor %}
-	];
+		var gfyArray = {{ site.data.gifs | jsonify }};
 
-	function getGfyTag(id) {
-		var gfy = '<figure class="entry-gfy">';
-		gfy += '<div class="gfyitem" data-expand="true" data-autoplay="true" data-id="';
-		gfy += id;
-		gfy += '" /></figure>';
-		return gfy;
-	}
-
-	function shuffle(sourceArray) {
-		for (var i = 0; i < sourceArray.length - 1; i++) {
-			var j = i + Math.floor(Math.random() * (sourceArray.length - i));
-
-			var temp = sourceArray[j];
-			sourceArray[j] = sourceArray[i];
-			sourceArray[i] = temp;
+		function getGfyTag(id) {
+			var gfy = '<figure class="entry-gfy">';
+			gfy += '<div class="gfyitem" data-expand="true" data-autoplay="true" data-id="';
+			gfy += id;
+			gfy += '" /></figure>';
+			return gfy;
 		}
-		return sourceArray;
-	}
+		
+		function getGfyName(name)
+		{
+			var text = '<div class="gfy-name">"';
+			text += name
+			text += '"</div>';
+			return text;
+		}
 
-	var shuffledArray = shuffle(gfyArray);
-	document.write(getGfyTag(shuffledArray[0]));
-	  
+		function shuffle(sourceArray) {
+			for (var i = 0; i < sourceArray.length - 1; i++) {
+				var j = i + Math.floor(Math.random() * (sourceArray.length - i));
+
+				var temp = sourceArray[j];
+				sourceArray[j] = sourceArray[i];
+				sourceArray[i] = temp;
+			}
+			return sourceArray;
+		}
+
+		var shuffledArray = shuffle(gfyArray);
+		document.write(getGfyTag(shuffledArray[0].gfyid));
+		document.write(getGfyName(shuffledArray[0].name));
 	</script>
-	<br/>
+	
+	<hr/>
+	
+	<h2>HiFight's Clip</h2>
     <a class="twitter-timeline" 
 	href="https://twitter.com/search?q=from%3AHiFightTH%20Filter%3Avideos%20-filter%3Anativeretweets" 
 	data-widget-id="991561681225465857" 
 	data-chrome="noheader nofooter noborders">
 		Tweets by HiFightTH
 	</a>
+	
+	<hr/>
+	
+	<h2>HiFight's Retweet</h2>      
+	<a class="twitter-timeline"  
+	href="https://twitter.com/search?q=from%3AHiFightTH%20Filter%3Avideos%20filter%3Anativeretweets" 
+	data-widget-id="991846590292807680"
+	data-chrome="noheader nofooter noborders">
+		Retweets by HiFightTH
+	</a>
+	
 	<script>
-		!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';
+		!function(d,s,id){
+			var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';
 			if(!d.getElementById(id)){
-				js=d.createElement(s);js.id=id;
+				js=d.createElement(s);
+				js.id=id;
 				js.src=p+"://platform.twitter.com/widgets.js";
 				js.setAttribute('onload', "twttr.events.bind('rendered',function(e) {responsiveTwitterWidget()});");
 				fjs.parentNode.insertBefore(js,fjs);
-			}}(document,"script","twitter-wjs");
+			}
+		}(document,"script","twitter-wjs");
 
 		function responsiveTwitterWidget(){
 			var widget = $("#twitter-widget-0");
@@ -65,4 +86,5 @@ title: Top
 			}
 		}
 	</script>
+	
 </div><!-- end #home -->

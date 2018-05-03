@@ -6,34 +6,42 @@ permalink: /gifs/
 
 <script type="text/javascript">
 	
-var gfyArray = [
-{% for gif in site.data.gifs %}
-"{{ gif.gfyid }}",
-{% endfor %}
-];
+	var gfyArray = {{ site.data.gifs | jsonify }};
 
-function getGfyTag(id) {
-	var gfy = '<figure class="entry-gfy">';
-	gfy += '<div class="gfyitem" data-expand="true" data-autoplay="true" data-id="';
-	gfy += id;
-	gfy += '" /></figure><br/>';
-	return gfy;
-}
 
-function shuffle(sourceArray) {
-    for (var i = 0; i < sourceArray.length - 1; i++) {
-        var j = i + Math.floor(Math.random() * (sourceArray.length - i));
+	function getGfyTag(id) {
+		var gfy = '<figure class="entry-gfy">';
+		gfy += '<div class="gfyitem" data-expand="true" data-autoplay="true" data-id="';
+		gfy += id;
+		gfy += '" /></figure>';
+		return gfy;
+	}
 
-        var temp = sourceArray[j];
-        sourceArray[j] = sourceArray[i];
-        sourceArray[i] = temp;
-    }
-    return sourceArray;
-}
+	function getGfyName(name)
+	{
+		var text = '<div class="gfy-name">"';
+		text += name
+		text += '"</div><br/>';
+		return text;
+	}
+		
+	function shuffle(sourceArray) {
+		for (var i = 0; i < sourceArray.length - 1; i++) {
+			var j = i + Math.floor(Math.random() * (sourceArray.length - i));
 
-var shuffledArray = shuffle(gfyArray);
-document.write(getGfyTag(shuffledArray[0]));
-document.write(getGfyTag(shuffledArray[1]));
-document.write(getGfyTag(shuffledArray[2]));
-  
+			var temp = sourceArray[j];
+			sourceArray[j] = sourceArray[i];
+			sourceArray[i] = temp;
+		}
+		return sourceArray;
+	}
+
+	var shuffledArray = shuffle(gfyArray);
+	document.write(getGfyTag(shuffledArray[0].gfyid));
+	document.write(getGfyName(shuffledArray[0].name));
+	document.write(getGfyTag(shuffledArray[1].gfyid));
+	document.write(getGfyName(shuffledArray[1].name));
+	document.write(getGfyTag(shuffledArray[2].gfyid));
+	document.write(getGfyName(shuffledArray[2].name));
+	  
 </script>
