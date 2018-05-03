@@ -7,3 +7,13 @@ profile_gfy: DevotedLightheartedDromedary
 twitter: "https://twitter.com/INFILTRATION85"
 twitch: "https://www.twitch.tv/infiltration85"
 ---
+
+
+
+<hr/>
+
+<h3>Characters</h3>
+
+Street Fighter IV: Akuma, Decapre, Hakan, Chun-Li
+
+Street Fighter V: Nash, Juri, Menat
