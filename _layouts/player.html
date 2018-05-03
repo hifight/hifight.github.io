@@ -22,6 +22,15 @@ layout: default
     {% endif %}
 	</div>
 	
+	{% if page.title %}
+		<h2>{{ page.title }}</h2>
+	{% endif %}
+	
+	<article class="content">
+		<div class="post">{{ content }}</div>
+		<hr />
+	</article>
+	
 	<a class="twitter-moment" 
 	href={{ page.moment_link }} 
 	data-chrome="noheader nofooter noborders noscrollbar">>

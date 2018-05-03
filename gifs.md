@@ -1,9 +1,10 @@
 ---
 layout: page
-title: Gifs
+title: GIFs
 permalink: /gifs/
 ---
 
+<h2>Random GIFs</h2>
 <script type="text/javascript">
 	
 	var gfyArray = {{ site.data.gifs | jsonify }};

@@ -9,7 +9,7 @@ funny moments and sometimes fighting games related news.
 I love watching fighting games and get so hype that I could not keep that to myself, 
 that's where I thought that I should share those feeling to everyone.
 
-I started creating fighting games highlight blog back in 2015 (on this website)
+I started fighting games highlight blog back in 2015 (on this website)
 and mainly sharing the blog only in Thai FGC facebook until around the time 
 Street Fighter V came out where I moved to twitter completely and stopped updating this website for a long time.
 
