@@ -5,6 +5,7 @@ permalink: /gifs/
 ---
 
 <h2>Random GIFs</h2>
+
 <script type="text/javascript">
 	
 	var gfyArray = {{ site.data.gifs | jsonify }};
@@ -44,5 +45,12 @@ permalink: /gifs/
 	document.write(getGfyName(shuffledArray[1].name));
 	document.write(getGfyTag(shuffledArray[2].gfyid));
 	document.write(getGfyName(shuffledArray[2].name));
+	document.write(getGfyTag(shuffledArray[3].gfyid));
+	document.write(getGfyName(shuffledArray[3].name));
+	document.write(getGfyTag(shuffledArray[4].gfyid));
+	document.write(getGfyName(shuffledArray[4].name));
 	  
 </script>
+
+
+Refresh to shuffle GIFs
