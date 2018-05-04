@@ -31,6 +31,19 @@ layout: default
 		<hr />
 	</article>
 	
+	{% if page.hifight %}
+		<h3>HiFight's Point!</h3>
+		<div class="post">{{ page.hifight }}</div>
+		<hr />
+	{% endif %}
+	
+	{% if page.article_gfy %}
+		<figure class="entry-gfy">
+			<div class="gfyitem" data-autoplay="true" data-id="{{ page.article_gfy }}" />
+		</figure>
+		<hr />
+	{% endif %}
+	
 	<a class="twitter-moment" 
 	href={{ page.moment_link }} 
 	data-chrome="noheader nofooter noborders noscrollbar">>

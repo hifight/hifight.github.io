@@ -5,7 +5,7 @@ moment_link: "https://twitter.com/i/moments/991703839156813825?ref_src=twsrc%5Et
 profile_pic: tokido.jpg
 profile_gfy: LavishGorgeousBetafish
 twitter: "https://twitter.com/tokidoki77"
-hifight: “Murder Face,Tape Measure,Demon”
+hifight: Murder Face, Tape Measure, Kara Demon
 ---
 
 Also known as “Murder Face”. Tokyo University graduated pro gamer. Tokido was known for competing in multiple fighting games, using only strong characters and strong tactics to get many high places on multiple games in tournament. 

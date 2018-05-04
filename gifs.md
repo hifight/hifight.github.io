@@ -54,3 +54,6 @@ permalink: /gifs/
 
 
 Refresh to shuffle GIFs
+
+If you have any suggestions or any gif you want me to add, 
+please DM <a href="https://twitter.com/HiFightTH">@HiFightTH</a>.

@@ -4,9 +4,10 @@ title:  "Daigo Umehara"
 moment_link: "https://twitter.com/i/moments/991638553229578240?ref_src=twsrc%5Etfw"
 profile_pic: daigo_umehara.jpg
 profile_gfy: WeirdFrigidIncatern
+article_gfy: IllShadyHog
 twitter: "https://twitter.com/daigothebeast"
 twitch: "https://www.twitch.tv/daigothebeastv"
-hifight: “UmeShoryu,UmeFlash,UmeNeutral”
+hifight: UmeShoryu, UmeFlash, UmeNeutral
 ---
 
 Also known as "The Beast". Twitch's first global ambassador, 
