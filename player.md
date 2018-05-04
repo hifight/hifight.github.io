@@ -17,8 +17,8 @@ permalink: /player/
 				{% endif %}
 			</div>
 			<div class="row-content">
-				<div class="least-content">{{ player.hifight }}</div>
 				<h4 class="list-group-item-heading"><a href="{{ site.url }}/player/{{ player.link }}">{{ player.name }}</a></h4>
+            <div class="least-content">{{ player.hifight }}</div>
 
 				<p class="list-group-item-text">{{ player.content | strip_html | truncatewords: 25 }}</p>
 			</div>
