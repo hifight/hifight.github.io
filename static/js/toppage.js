@@ -45,11 +45,6 @@
 			rowContent.className = "row-content";
 			listGroupItem.appendChild(rowContent);
 			
-			var leastContent = document.createElement("div");
-			leastContent.className = "least-content";
-			leastContent.innerHTML = playerData.hifight;
-			rowContent.appendChild(leastContent);
-			
 			var listGroupItemHeading = document.createElement("h4");
 			listGroupItemHeading.className = "list-group-item-heading";
 			rowContent.appendChild(listGroupItemHeading);
@@ -58,6 +53,11 @@
 			headName.href = "{{ site.url }}/player/" + playerData.link;
 			headName.innerHTML = playerData.name;
 			listGroupItemHeading.appendChild(headName);
+			
+			var leastContent = document.createElement("div");
+			leastContent.className = "least-content";
+			leastContent.innerHTML = playerData.hifight;
+			listGroupItemHeading.appendChild(leastContent);
 			
 			var content = document.createElement("p");
 			content.className = "list-group-item-text";
