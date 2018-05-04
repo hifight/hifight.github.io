@@ -16,6 +16,7 @@ layout: null
 		<item>
 			<title>{{ player.name }}</title>
 			<link>{{ site.url }}/player/{{ player.link}}</link>
+			<description>{{ player.content | xml_escape }}</description>
 		</item>
     {% endfor %}
 	

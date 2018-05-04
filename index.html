@@ -53,6 +53,65 @@ title: Top
 	
 	<hr/>
 	
+	<h2>Players</h2>
+	<script type="text/javascript">
+		var array = {{ site.data.players | jsonify }};
+
+		function getPlayerText(playerData)
+		{
+			var text = '<div class="list-group">';
+			text += '<div class="list-group-item">';
+			
+			text += '<div class="row-action-primary">';
+			
+			text += '<a href="{{ site.url }}/player/';
+			text += playerData.link;
+			text += '">';
+			text += '<img class="row-picture" src="/static/img/player/';
+			text += playerData.link;
+			text += '.jpg"></a>';
+			
+			text += '</div>';
+			
+			text += '<div class="row-content">';
+			text += '<div class="least-content">';
+			text += playerData.hifight;
+			text += '</div>';
+			
+			text += '<h4 class="list-group-item-heading"><a href="{{ site.url }}/player/';
+			text += playerData.link;
+			text += '">';
+			text += playerData.name;
+			text += '</a></h4>';
+			
+			text += '<p class="list-group-item-text">';
+			text += playerData.content.split(" ").splice(0,25).join(" ");
+			text += '...</p>';
+				
+			text += '</div>';
+			text += '</div>';
+			text += '<div class="list-group-separator"></div>';
+			text += '</div>';
+			return text;
+		}
+
+		function shuffle(sourceArray) {
+			for (var i = 0; i < sourceArray.length - 1; i++) {
+				var j = i + Math.floor(Math.random() * (sourceArray.length - i));
+
+				var temp = sourceArray[j];
+				sourceArray[j] = sourceArray[i];
+				sourceArray[i] = temp;
+			}
+			return sourceArray;
+		}
+
+		var shuffledArray = shuffle(array);
+		document.write(getPlayerText(shuffledArray[0]));
+		document.write(getPlayerText(shuffledArray[1]));
+		document.write(getPlayerText(shuffledArray[2]));
+	</script>
+	
 	<h2>HiFight's Retweet</h2>      
 	<a class="twitter-timeline"  
 	href="https://twitter.com/search?q=from%3AHiFightTH%20Filter%3Avideos%20filter%3Anativeretweets" 

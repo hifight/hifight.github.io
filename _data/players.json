@@ -2,17 +2,25 @@
   {
     "name": "Daigo Umehara",
     "link": "daigo_umehara",
+	"hifight": "UmeShoryu, UmeFlash, UmeNeutral",
+    "content": "Also known as “The Beast”. Twitch's first global ambassador, sponsored by Red Bull、HyperX、Cy Games、NSURGO in 2017. Currently holds a world record of ”the most successful player in major tournaments of Street Fighter” in Guinness World Records. ",
   },
   {
     "name": "Tokido",
     "link": "tokido",
+    "hifight": "Murder Face, Tape Measure, Kara Demon",
+    "content": "Also known as “Murder Face”. Tokyo University graduated pro gamer. Tokido was known for competing in multiple fighting games, using only strong characters and strong tactics to get many high places on multiple games in tournament. ",
   },
   {
     "name": "Infiltration",
     "link": "infiltration",
+    "hifight": "Download Complete, Hentai Air, Run&Gun",
+    "content": "Street Fighter IV, V and Street Fighter x Tekken multiple EVO Champion. One of the strongest Akuma and Decapre who can play almost all the cast in Street Fighter IV. Main Nash in the 1st season of SFV but changed to Juri and Menat in S2.",
   },
   {
     "name": "Momochi",
     "link": "momochi",
+    "hifight": "Hit Confirm, Whiff Punish, Neutral Game",
+    "content": "Capcom Cup 2014 and EVO 2015 Ultra Street Fighter IV Champion. Famouse for his amazing neutral/ground game, hit confirm and whiff punish. In Street Fighter V, he main Ken in S1 and S2 (also play Ibuki) but changed to Kolin in Arcade Edition. Outside of Street Fighter series, Momochi also played Ultimate Marvel vs Capcom 3 competetively before and currently compete in Dragon Ball FighterZ as well.",
   },
 ]
