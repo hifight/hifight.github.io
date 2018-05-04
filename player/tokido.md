@@ -3,7 +3,8 @@ layout: player
 title:  "Tokido"
 moment_link: "https://twitter.com/i/moments/991703839156813825?ref_src=twsrc%5Etfw"
 profile_pic: tokido.jpg
-profile_gfy: LavishGorgeousBetafish
+profile_gfy: LimpingPassionateChevrotain
+article_gfy: EnlightenedPaleCottontail
 twitter: "https://twitter.com/tokidoki77"
 hifight: Murder Face, Tape Measure, Kara Demon
 ---
