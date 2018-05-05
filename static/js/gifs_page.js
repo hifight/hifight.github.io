@@ -30,7 +30,7 @@
 			
 			var gfyName = document.createElement("div");
 			gfyName.className = "gfy-name";
-			gfyName.innerHTML = gfyData.name;
+			gfyName.innerHTML = '"' + gfyData.name + '"';
 			parentDiv.appendChild(gfyName);
 			
 			var br = document.createElement("br");

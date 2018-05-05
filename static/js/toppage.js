@@ -8,7 +8,7 @@
 		function setGfy(gfyData) {
 			var gfy = document.getElementById("top-gfy");
 			gfy.setAttribute('data-id', gfyData.gfyid);
-			document.getElementById("top-gfy-name").innerHTML = gfyData.name;
+			document.getElementById("top-gfy-name").innerHTML = '"' + gfyData.name + '"';
 		}
 		
 		function shuffle(sourceArray) {
