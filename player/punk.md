@@ -10,7 +10,7 @@ twitch: "https://www.twitch.tv/punkdagod"
 hifight: The Alpha, Da God, Hit Confirm
 ---
 
-Known for his Karin's whiff punish and hit confirm reaction 
+The Alpha. Known for his Karin's whiff punish and hit confirm reaction 
 that are clearly better than any top-level players in the world. 
 In Japanese news on EVO 2017, they refer to Punk as 'The machine who plays on pad like SNK CPU'.
 

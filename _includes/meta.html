@@ -21,8 +21,8 @@
         {% else %}
           <meta content="website" property="og:type">
         {% endif %}
-        {% if page.description %}
-          <meta content="{{ page.description }}" property="og:description">
+        {% if page.content %}
+          <meta content="{{ page.content | strip_html | truncatewords:25  }}" property="og:description">
         {% else %}
           <meta content="{{ site.description }}" property="og:description">
         {% endif %}
@@ -33,8 +33,8 @@
           <meta content="{{ page.date | date_to_xmlschema }}" property="article:published_time">
           <meta content="{{ site.url }}/about/" property="article:author">
         {% endif %}
-        {% if page.image %}
-          <meta content="{{ site.url }}/static/img/posts/{{ page.image }}" property="og:image">
+        {% if page.profile_pic %}
+          <meta content="{{ site.url }}/static/img/player/{{ page.profile_pic }}" property="og:image">
         {% else %}
           <meta content="{{ site.url }}/static/img/logo-high-resolution.png" property="og:image">
         {% endif %}
@@ -59,11 +59,11 @@
         {% if page.url %}
           <meta name="twitter:url" content="{{ site.url }}{{ page.url }}">
         {% endif %}
-        {% if page.description %}
-          <meta name="twitter:description" content="{{ page.description }}">
+        {% if page.content %}
+          <meta name="twitter:description" content="{{ page.content | strip_html | truncatewords:25  }}">
         {% else %}
           <meta name="twitter:description" content="{{ site.description }}">
         {% endif %}
-        {% if page.header-img %}
-          <meta name="twitter:image:src" content="{{ site.url }}/{{ page.header-img }}">
+        {% if page.profile_pic %}
+          <meta name="twitter:image:src" content="{{ site.url }}/static/img/player/{{ page.profile_pic }}">
         {% endif %}
