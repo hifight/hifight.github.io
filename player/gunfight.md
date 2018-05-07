@@ -11,8 +11,11 @@ hifight: Alex Nation, Parry, Footsies
 ---
 
 Rank #1 Alex on CFN. The first player who reach Master Rank with Alex.
-Co-founder and player of team AtlasBear. Head of the Alex Nation. 
-Gunfight is a very strong French 3rd Strike player (Dudley) who lives in Japan.
+Head of the Alex Nation. Co-founder and professional player of team AtlasBear. 
+He is also very strong in Street Fighter III : 3rd Strike (Dudley) as well.
+
+French but currently lives in Japan. 
+He was sponsored by Nuckle Du to go to EVO 2017.
 
 <hr/>
 
