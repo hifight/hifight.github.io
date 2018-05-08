@@ -19,5 +19,5 @@ And that's where my new updated blog is coming from.
 
 If you have any suggestions, feel free to leave messages on my 
 twitter page <a href="https://twitter.com/HiFightTH">@HiFightTH</a> 
-or via <a href="mailto:hifight.th@gmail.com">hifight.th@gmail.com</a> .
+or via <a href="mailto:hifight.th@gmail.com">hifight.th@gmail.com</a>.
 And don't forget to follow for more highlight!
