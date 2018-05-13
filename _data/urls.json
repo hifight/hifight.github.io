@@ -15,6 +15,11 @@
     "icon": "fa-image",
   },
   {
+    "text": "Follow",
+    "url": "/follow/",
+    "icon": "fa-thumbs-up",
+  },
+  {
     "text": "About",
     "url": "/about/",
     "icon": "fa-comments"

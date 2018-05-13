@@ -12,8 +12,8 @@ hifight: Execution, Optimization, Menat
 
 Player who has the best execution in fighting games history.
 One of five Japanese fighting games gods. Capcom Cup 2013 champion.
-The scientist who developed characters to the new level like Bulleta in Vampire Savior, 
-Eddie in Guilty Gear XX or Menat in Street Fighter V.
+The scientist who always develop his characters to the new level that no one else can, 
+like Bulleta in Vampire Savior, Eddie in Guilty Gear XX and Menat in Street Fighter V.
 
 Sako has been playing fighting games since the old days 
 but many people got to know him for his GODSGARDEN fight with Daigo Umehara in Super Street Fighter IV 
