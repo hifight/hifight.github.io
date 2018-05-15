@@ -38,8 +38,8 @@
   {
     "name": "MenaRD",
     "link": "menard",
-    "hifight": "Birdie Optimization, Bull Revenger CA",
-    "content": "During Capcom Cup 2017, MenaRD beat Xian, Kazunoko, Daigo Umehara, Nemo and Tokido, who beat him in winner's final but MenaRD able to brought it back from loser bracket and became Capcom Cup 2017 champion.",
+    "hifight": "Birdie, Bull Revenger CA, Caba",
+    "content": "During Capcom Cup 2017, MenaRD beat Xian, Kazunoko, Daigo Umehara, Itabashi Zangief, Nemo, only lost to Tokido in winner finals which MenaRD was able to beat him 2 set in Grand Finals to become the champion of Capcom Cup 2017.",
   },
   {
     "name": "Gunfight",
@@ -52,5 +52,11 @@
     "link": "sako",
     "hifight": "Execution, Optimization, Menat",
     "content": "Player who has the best execution in fighting games history. One of five Japanese fighting games gods. Capcom Cup 2013 champion. The scientist who always develop his characters to the new level that no one else can, like Bulleta in Vampire Savior, Eddie in Guilty Gear XX and Menat in Street Fighter V.",
+  },
+  {
+    "name": "Go1",
+    "link": "go1",
+    "hifight": "Defense, DBFZ, Menat",
+    "content": "The best MELTY BLOOD Act Cadenza and Dragon Ball FighterZ of all time. Go1 is known for his skill in defensing opponent attack with reaction to the level where people saying that he bully his opponent by just blocking. ",
   },
 ]

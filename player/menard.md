@@ -7,14 +7,15 @@ profile_gfy: FavorableCelebratedBluewhale
 article_gfy: OfficialVagueEarthworm
 twitter: "https://twitter.com/_MenaRD__"
 twitch: "https://www.twitch.tv/MENA_RDonline"
-hifight: Birdie Optimization, Bull Revenger CA
+hifight: Birdie, Bull Revenger CA, Caba
 ---
 
-During Capcom Cup 2017, MenaRD beat Xian, Kazunoko, Daigo Umehara, Nemo and Tokido, 
-who beat him in winner's final but MenaRD able to brought it back from loser bracket 
-and became Capcom Cup 2017 champion.
+During Capcom Cup 2017, MenaRD beat Xian, Kazunoko, Daigo Umehara, Itabashi Zangief, 
+Nemo, only lost to Tokido in winner finals which MenaRD was able to beat him 2 set in Grand Finals
+to become the champion of Capcom Cup 2017.
 
-Aside from Capcom Cup 2017, he also won Kumite in Tennessee 2018 and beat Punk in FT7 exhibition as well.
+After Capcom Cup 2017, MenaRD won Kumite in Tennessee 2018, beating Punk in FT7 exhibition,  
+and also won Texas Showdown 2018 which was a very stacked tournament as well.
 
 <hr/>
 

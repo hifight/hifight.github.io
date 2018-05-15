@@ -100,6 +100,26 @@ and I cannot thank you them enough. Check out their channel and give them some f
 		<!-------------------------------------> 
 		
 		<div class="row-action-primary">
+			<img class="row-picture" src="/static/img/follow/jiyuna.jpeg">
+		</div>
+		<div class="row-content">
+			<h4 class="list-group-item-heading">
+				ANIMEILLUMINATI
+				<a class="icon" href="https://www.twitch.tv/ANIMEILLUMINATI" target="_blank"><i class="fa fa-twitch"></i></a>
+				<a class="icon" href="https://twitter.com/jiyunaJP" target="_blank"><i class="fa fa-twitter"></i></a>
+				<a class="icon" href="https://www.youtube.com/channel/UClQVIpFHy14FehFeEXdOKwQ" target="_blank"><i class="fa fa-youtube"></i></a>
+				
+			</h4>
+			<p class="list-group-item-text">
+			Jiyuna twitch channel who run official Dragon Ball FighterZ weekly tournament at Red Bull Gaming Sphere Tokyo 
+			and have been doing English stream channel for many fighting game tournaments in Japan.
+			</p>
+
+		</div>
+		<div class="list-group-separator"></div>
+		<!-------------------------------------> 
+		
+		<div class="row-action-primary">
 			<img class="row-picture" src="/static/img/follow/ultrachentv.jpeg">
 		</div>
 		<div class="row-content">
@@ -151,7 +171,7 @@ and I cannot thank you them enough. Check out their channel and give them some f
 		</div>
 		<div class="row-content">
 			<h4 class="list-group-item-heading">
-				Double Tap FGC
+				Double Tap
 				<a class="icon" href="https://twitter.com/DoubleTapFGC" target="_blank"><i class="fa fa-twitter"></i></a>
 				<a class="icon" href="https://itunes.apple.com/us/podcast/double-tap-podcast-for-fighting/id1021331410" target="_blank"><i class="fa fa-apple"></i></a>	
 				<a class="icon" href="http://mashthosebuttons.com/show/double-tap/" target="_blank"><i class="fa fa-link"></i></a>
