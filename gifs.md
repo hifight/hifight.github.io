@@ -4,6 +4,9 @@ title: GIFs
 permalink: /gifs/
 ---
 
+<div id="enter-gfy">
+</div>
+
 <h2>Random GIFs</h2>
 
 <div id="gfy-list">

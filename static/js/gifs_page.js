@@ -59,12 +59,13 @@ function addGfy()
 	var url_string = window.location.href
 	var url = new URL(url_string);
 	var id = url.searchParams.get("id");
-	var enterGfy = null;
 	for(var j = 0; j < gfyArray.length; j++)
 	{
 		if(gfyArray[j].gfyid == id)
 		{
-			enterGfy = gfyArray[j];
+			var enterDiv = document.getElementById('enter-gfy');
+			addGfyData(enterDiv, gfyArray[j]);
+			break;
 		}
 	}
 	
@@ -73,11 +74,7 @@ function addGfy()
 	var i;
 	for(i = index; i < index + max; i++)
 	{
-		// Set the first gfy to id parameter
-		if(enterGfy != null && i == 0)
-			addGfyData(div, enterGfy);
-		else
-			addGfyData(div, shuffledGfyArray[i]);
+		addGfyData(div, shuffledGfyArray[i]);
 	}
 	index = i;
 	
