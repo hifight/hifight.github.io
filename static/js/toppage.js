@@ -24,20 +24,36 @@
 			gfy.setAttribute('data-id', gfyData.gfyid);
 			figure.appendChild(gfy);
 			
-			var gfyName = document.createElement("div");
-			gfyName.className = "gfy-name";
-			gfyName.innerHTML = '"' + gfyData.name + '"';
-			parentDiv.appendChild(gfyName);
-			
-			var gfyShare = document.createElement("a");
-			gfyShare.className = "gfy-share";
-			gfyShare.href = "{{ site.url }}?id=" + gfyData.gfyid;
-			gfyShare.target = "_blank";
-			gfyName.appendChild(gfyShare);
-			
-			var gfyShareIcon = document.createElement("i");
-			gfyShareIcon.className = "fa fa-share";
-			gfyShare.appendChild(gfyShareIcon);
+			{
+				var gfyName = document.createElement("div");
+				gfyName.className = "gfy-name";
+				gfyName.innerHTML = '"' + gfyData.name + '"';
+				parentDiv.appendChild(gfyName);
+				
+				var gfyShare = document.createElement("a");
+				gfyShare.className = "gfy-share";
+				gfyShare.href = "{{ site.url }}/?id=" + gfyData.gfyid;
+				gfyShare.target = "_blank";
+				gfyName.appendChild(gfyShare);
+				var gfyShareIcon = document.createElement("i");
+				gfyShareIcon.className = "fa fa-share";
+				gfyShare.appendChild(gfyShareIcon);
+				
+				// Twitter link share button
+				var twitterIntent = "https://twitter.com/intent/tweet?";
+				twitterIntent += "text=" + gfyData.name;
+				twitterIntent += "&url={{ site.url }}/?id=" + gfyData.gfyid;
+				twitterIntent += "&via=HiFightTH";
+				twitterIntent += "&hashtags=HiFightGIF";
+				var twitterShare = document.createElement("a");
+				twitterShare.className = "gfy-share";
+				twitterShare.href = twitterIntent;
+				twitterShare.target = "_blank";
+				gfyName.appendChild(twitterShare);
+				var twitterShareIcon = document.createElement("i");
+				twitterShareIcon.className = "fa fa-twitter";
+				twitterShare.appendChild(twitterShareIcon);
+			}
 			
 			var br = document.createElement("br");
 			parentDiv.appendChild(br);

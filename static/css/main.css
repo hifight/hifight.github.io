@@ -232,6 +232,7 @@ footer {
 .gfy-share{
 	float:right;
     color: #999;
+    padding: 0 5px 0;
 }
 .gfy-share:hover {
     color: #555;
