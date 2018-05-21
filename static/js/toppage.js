@@ -11,6 +11,39 @@
 			document.getElementById("top-gfy-name").innerHTML = '"' + gfyData.name + '"';
 		}
 		
+		function addGfyData(parentDiv, gfyData)
+		{
+			var figure = document.createElement("FIGURE");
+			figure.className = "entry-gfy";
+			parentDiv.appendChild(figure);
+			
+			var gfy = document.createElement("div");
+			gfy.className = "gfyitem";
+			gfy.setAttribute('data-expand', "true");
+			gfy.setAttribute('data-autoplay', "true");
+			gfy.setAttribute('data-id', gfyData.gfyid);
+			figure.appendChild(gfy);
+			
+			var gfyName = document.createElement("div");
+			gfyName.className = "gfy-name";
+			gfyName.innerHTML = '"' + gfyData.name + '"';
+			parentDiv.appendChild(gfyName);
+			
+			var gfyShare = document.createElement("a");
+			gfyShare.className = "gfy-share";
+			gfyShare.href = "{{ site.url }}?id=" + gfyData.gfyid;
+			gfyShare.target = "_blank";
+			gfyName.appendChild(gfyShare);
+			
+			var gfyShareIcon = document.createElement("i");
+			gfyShareIcon.className = "fa fa-share";
+			gfyShare.appendChild(gfyShareIcon);
+			
+			var br = document.createElement("br");
+			parentDiv.appendChild(br);
+			
+		}
+		
 		function shuffle(sourceArray) {
 			for (var i = 0; i < sourceArray.length - 1; i++) {
 				var j = i + Math.floor(Math.random() * (sourceArray.length - i));
@@ -69,8 +102,26 @@
 			listGroupElement.appendChild(listGroupSeparator);
 		}
 
+		// Check if there is id parameter in the url
+		var url_string = window.location.href
+		var url = new URL(url_string);
+		var id = url.searchParams.get("id");
+		var enterGfy = null;
+		for(var j = 0; j < gfyArray.length; j++)
+		{
+			if(gfyArray[j].gfyid == id)
+			{
+				enterGfy = gfyArray[j];
+			}
+		}
+		
 		var shuffledGfyArray = shuffle(gfyArray);
-		setGfy(shuffledGfyArray[0]);
+		var gfydiv = document.getElementById('top-gfy');
+		if(enterGfy != null)
+			addGfyData(gfydiv, enterGfy)
+		else
+			addGfyData(gfydiv, shuffledGfyArray[0])
+		//setGfy(shuffledGfyArray[0]);
 		
 		var shuffledPlayerArray = shuffle(playerArray);
 		var div = document.getElementById('player-list');
