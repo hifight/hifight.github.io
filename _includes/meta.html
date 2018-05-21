@@ -36,7 +36,7 @@
         {% if page.profile_pic %}
           <meta content="{{ site.url }}/static/img/player/{{ page.profile_pic }}" property="og:image">
         {% else %}
-          <meta content="{{ site.url }}/static/img/logo-high-resolution.png" property="og:image">
+          <meta content="{{ site.url }}/static/img/hifight_avatar.jpg" property="og:image">
         {% endif %}
         {% if page.categories %}
           {% for category in page.categories limit:1 %}
@@ -67,6 +67,6 @@
         {% if page.profile_pic %}
           <meta name="twitter:image:src" content="{{ site.url }}/static/img/player/{{ page.profile_pic }}">
         {% else %}
-          <meta name="twitter:image:src" content="{{ site.url }}/static/img/logo-high-resolution.png">
+          <meta name="twitter:image:src" content="{{ site.url }}/static/img/hifight_avatar.jpg">
 		
         {% endif %}
