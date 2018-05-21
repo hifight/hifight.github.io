@@ -38,6 +38,16 @@ function addGfyData(parentDiv, gfyData)
 	gfyName.innerHTML = '"' + gfyData.name + '"';
 	parentDiv.appendChild(gfyName);
 	
+	var gfyShare = document.createElement("a");
+	gfyShare.className = "gfy-share";
+	gfyShare.href = "{{ site.url }}/gifs/?id=" + gfyData.gfyid;
+	gfyShare.target = "_blank";
+	gfyName.appendChild(gfyShare);
+	
+	var gfyShareIcon = document.createElement("i");
+	gfyShareIcon.className = "fa fa-share";
+	gfyShare.appendChild(gfyShareIcon);
+	
 	var br = document.createElement("br");
 	parentDiv.appendChild(br);
 	
@@ -45,16 +55,29 @@ function addGfyData(parentDiv, gfyData)
 
 function addGfy()
 {
+	// Check if there is id parameter in the url
+	var url_string = window.location.href
+	var url = new URL(url_string);
+	var id = url.searchParams.get("id");
+	var enterGfy = null;
+	for(var j = 0; j < gfyArray.length; j++)
+	{
+		if(gfyArray[j].gfyid == id)
+		{
+			enterGfy = gfyArray[j];
+		}
+	}
+	
 	var div = document.getElementById('gfy-list');
 	
-	// while(div.firstChild){
-		// div.removeChild(div.firstChild);
-	// }
-
 	var i;
 	for(i = index; i < index + max; i++)
 	{
-		addGfyData(div, shuffledGfyArray[i]);
+		// Set the first gfy to id parameter
+		if(enterGfy != null && i == 0)
+			addGfyData(div, enterGfy);
+		else
+			addGfyData(div, shuffledGfyArray[i]);
 	}
 	index = i;
 	

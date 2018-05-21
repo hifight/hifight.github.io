@@ -229,6 +229,13 @@ footer {
     font-size: 18px;
     text-align: center;
 }
+.gfy-share{
+	float:right;
+    color: #999;
+}
+.gfy-share:hover {
+    color: #555;
+}
 #refreshButton {
     position: fixed; /* Fixed/sticky position */
     bottom: 20px; /* Place the button at the bottom of the page */
