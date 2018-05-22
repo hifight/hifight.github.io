@@ -29,15 +29,17 @@
 				gfyName.className = "gfy-name";
 				gfyName.innerHTML = '"' + gfyData.name + '"';
 				parentDiv.appendChild(gfyName);
-				
-				var gfyShare = document.createElement("a");
-				gfyShare.className = "gfy-share";
-				gfyShare.href = "{{ site.url }}/?id=" + gfyData.gfyid;
-				gfyShare.target = "_blank";
-				gfyName.appendChild(gfyShare);
-				var gfyShareIcon = document.createElement("i");
-				gfyShareIcon.className = "fa fa-share";
-				gfyShare.appendChild(gfyShareIcon);
+		
+				// Download button
+				var gfyDownload = document.createElement("a");
+				gfyDownload.className = "gfy-share";
+				gfyDownload.href = "https://gfycat.com/gifs/detail/" + gfyData.gfyid;
+				gfyDownload.target = "_blank";
+				gfyDownload.title = "Download on gfycat";
+				gfyName.appendChild(gfyDownload);
+				var gfyDownloadIcon = document.createElement("i");
+				gfyDownloadIcon.className = "fa fa-download";
+				gfyDownload.appendChild(gfyDownloadIcon);
 				
 				// Twitter link share button
 				var twitterIntent = "https://twitter.com/intent/tweet?";
@@ -49,10 +51,22 @@
 				twitterShare.className = "gfy-share";
 				twitterShare.href = twitterIntent;
 				twitterShare.target = "_blank";
+				twitterShare.title = "Share on Twitter";
 				gfyName.appendChild(twitterShare);
 				var twitterShareIcon = document.createElement("i");
 				twitterShareIcon.className = "fa fa-twitter";
 				twitterShare.appendChild(twitterShareIcon);
+				
+				// Direct link share button
+				var gfyShare = document.createElement("a");
+				gfyShare.className = "gfy-share";
+				gfyShare.href = "{{ site.url }}/?id=" + gfyData.gfyid;
+				gfyShare.target = "_blank";
+				gfyShare.title = "Direct link";
+				gfyName.appendChild(gfyShare);
+				var gfyShareIcon = document.createElement("i");
+				gfyShareIcon.className = "fa fa-share";
+				gfyShare.appendChild(gfyShareIcon);
 			}
 			
 			var br = document.createElement("br");
