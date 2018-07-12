@@ -49,6 +49,8 @@ One can be performed by neutral release, and forward/backward release for the ot
 
 <img class="row-picture" src="/static/img/footsies/footsies_04.jpg">
 
+<img class="row-picture" src="/static/img/footsies/Footsies_FrameData.jpg">
+
 Shoutout to <a href="https://twitter.com/WydD">@WydD</a> and his amazing <u><a href="https://sfvsim.com/">sfvsim</a></u> which help me a lot during the development of this game.
 
 <hr/>
