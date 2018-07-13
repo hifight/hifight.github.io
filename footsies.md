@@ -26,7 +26,9 @@ we actually had a lot of fun! So, I hope that everyone try this game and have so
 
 <h3>Download</h3> 
 
-<b><u><a href="https://github.com/hifight/Footsies/releases/download/1.0.1/FOOTSIES_v1_0_1.zip" download>FOOTSIES</a></u></b>
+<b><u><a href="https://github.com/hifight/Footsies/releases/download/1.0.1/FOOTSIES_v1_0_1.zip" download>FOOTSIES v1.0.1</a></u></b>
+
+<u><a href="https://github.com/hifight/Footsies/releases/download/1.0.0/FOOTSIES_20180711.zip" download>FOOTSIES v1.0.0</a></u>
 
 ※You can config keys/buttons input after launching the game, although XInput can't be set on config windows, 
 XInput controller should work fine in the game.
