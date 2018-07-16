@@ -28,12 +28,12 @@ we actually had a lot of fun! So, I hope that everyone try this game and have so
 
 
 <b><u><a href="https://github.com/hifight/Footsies/releases/download/1.0.2/FOOTSIES_v1_0_2.zip" download>FOOTSIES v1.0.2</a></u></b>
-v1.0.2
+
 - Storing input before round start so that player can hold an attack and use special move right away (and removed round start normal attack when holding the button)
 - Increased guard break recovery frame by 1
 
 <u><a href="https://github.com/hifight/Footsies/releases/download/1.0.1/FOOTSIES_v1_0_1.zip" download>FOOTSIES v1.0.1</a></u>
-v1.0.1
+
 - Add XInput stick support (v1.0.0 only supports d-pad)
 - Reduced KO hit stop time from 3 seconds to 2 seconds
 - Made the post KO screen skip-able with attack button
