@@ -26,6 +26,9 @@ we actually had a lot of fun! So, I hope that everyone try this game and have so
 
 <h3>Download (PC)</h3> 
 
+<b><u><a href="https://github.com/hifight/Footsies/releases/download/1.0.4/FOOTSIES_v1_0_4.zip" download>FOOTSIES v1.0.4</a></u></b>
+
+- Improved AI for vs CPU mode
 
 <b><u><a href="https://github.com/hifight/Footsies/releases/download/1.0.2/FOOTSIES_v1_0_2.zip" download>FOOTSIES v1.0.2</a></u></b>
 
