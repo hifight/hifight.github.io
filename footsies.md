@@ -26,11 +26,17 @@ we actually had a lot of fun! So, I hope that everyone try this game and have so
 
 <h3>Download (PC)</h3> 
 
-<b><u><a href="https://github.com/hifight/Footsies/releases/download/1.0.4/FOOTSIES_v1_0_4.zip" download>FOOTSIES v1.0.4</a></u></b>
+<b><u><a href="https://github.com/hifight/Footsies/releases/download/1.0.5/FOOTSIES_v1_0_5.zip" download>FOOTSIES v1.0.5</a></u></b>
+
+- Can now continue playing vs CPU mode until player loses three rounds
+- Count and save the number of win in vs CPU mode
+- Slightly improved AI
+
+<u><a href="https://github.com/hifight/Footsies/releases/download/1.0.4/FOOTSIES_v1_0_4.zip" download>FOOTSIES v1.0.4</a></u>
 
 - Improved AI for vs CPU mode
 
-<b><u><a href="https://github.com/hifight/Footsies/releases/download/1.0.2/FOOTSIES_v1_0_2.zip" download>FOOTSIES v1.0.2</a></u></b>
+<u><a href="https://github.com/hifight/Footsies/releases/download/1.0.2/FOOTSIES_v1_0_2.zip" download>FOOTSIES v1.0.2</a></u>
 
 - Storing input before round start so that player can hold an attack and use special move right away (and removed round start normal attack when holding the button)
 - Increased guard break recovery frame by 1
