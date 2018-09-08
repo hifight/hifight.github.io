@@ -32,6 +32,6 @@ All content on this website and twitter are not mine.
 The real heroes are those streamers and players who create amazing fighting game moments for us. 
 So, if you like those hype moments and feel like supporting the scene, please consider support those people who created the conent first. 
 
-However if you appreciate my work on highlighting and want to support me directly then do so on <a href="https://www.paypal.me/HiFight" target="_blank">this link</a>.
+However if you appreciate my work on highlighting and want to support me directly then do so on <a href="https://www.patreon.com/HiFight" target="_blank">here</a>.
 
 <hr/>
