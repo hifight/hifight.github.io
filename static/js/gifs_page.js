@@ -27,12 +27,12 @@ function addGfyData(parentDiv, gfyData)
 		figure.className = "entry-gfy";
 		parentDiv.appendChild(figure);
 		
-		var gfy = document.createElement("div");
-		gfy.className = "gfyitem";
-		gfy.setAttribute('data-expand', "true");
-		gfy.setAttribute('data-autoplay', "true");
-		gfy.setAttribute('data-id', gfyData.gfyid);
-		figure.appendChild(gfy);
+		var gfyFrame = document.createElement("iframe");
+		gfyFrame.setAttribute('src', 'https://gfycat.com/ifr/' + gfyData.gfyid + '?hd=1');
+		gfyFrame.setAttribute('frameborder', "0");
+		gfyFrame.setAttribute('width', "100%");
+		gfyFrame.setAttribute('height', "480");
+		figure.appendChild(gfyFrame)
 	}
 	
 	{
