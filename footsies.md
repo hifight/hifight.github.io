@@ -24,14 +24,40 @@ we actually had a lot of fun! So, I hope that everyone try this game and have so
 
 <img class="row-picture" src="/static/img/footsies/footsies_01.jpg">
 
-<h3>Download</h3> 
+<h3>Download (PC)</h3> 
 
-<b><u><a href="https://github.com/hifight/Footsies/releases/download/1.0.1/FOOTSIES_v1_0_1.zip" download>FOOTSIES v1.0.1</a></u></b>
+<b><u><a href="https://github.com/hifight/Footsies/releases/download/1.0.5/FOOTSIES_v1_0_5.zip" download>FOOTSIES v1.0.5</a></u></b>
+
+- Can now continue playing vs CPU mode until player loses three rounds
+- Count and save the number of win in vs CPU mode
+- Slightly improved AI
+
+<u><a href="https://github.com/hifight/Footsies/releases/download/1.0.4/FOOTSIES_v1_0_4.zip" download>FOOTSIES v1.0.4</a></u>
+
+- Improved AI for vs CPU mode
+
+<u><a href="https://github.com/hifight/Footsies/releases/download/1.0.2/FOOTSIES_v1_0_2.zip" download>FOOTSIES v1.0.2</a></u>
+
+- Storing input before round start so that player can hold an attack and use special move right away (and removed round start normal attack when holding the button)
+- Increased guard break recovery frame by 1
+
+<u><a href="https://github.com/hifight/Footsies/releases/download/1.0.1/FOOTSIES_v1_0_1.zip" download>FOOTSIES v1.0.1</a></u>
+
+- Add XInput stick support (v1.0.0 only supports d-pad)
+- Reduced KO hit stop time from 3 seconds to 2 seconds
+- Made the post KO screen skip-able with attack button
+- Expand forward/backward normal attack (Knee) hitbox downward so that it can whiff punish neutral normal attack (Kick)
+- Fix main menu bug where user cannot navigate menu with keyboard/controller anymore after clicking empty space
+- Fix main menu bug where mouse click does not select the menu that it is over after navigating with keyboard/controller
 
 <u><a href="https://github.com/hifight/Footsies/releases/download/1.0.0/FOOTSIES_20180711.zip" download>FOOTSIES v1.0.0</a></u>
 
 ※You can config keys/buttons input after launching the game, although XInput can't be set on config windows, 
 XInput controller should work fine in the game.
+
+<h3>Download (Android)</h3> 
+
+<b><u><a href="https://play.google.com/store/apps/details?id=com.hifight.FOOTSIES" download>FOOTSIES for Android </a></u></b>
 
 
 <img class="row-picture" src="/static/img/footsies/footsies_03.jpg">
