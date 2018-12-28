@@ -17,12 +17,16 @@
 			figure.className = "entry-gfy";
 			parentDiv.appendChild(figure);
 			
+			var gfyDiv = document.createElement("div");
+			gfyDiv.setAttribute('style', 'position:relative; padding-bottom:56.25%');
+			figure.appendChild(gfyDiv)
 			var gfyFrame = document.createElement("iframe");
 			gfyFrame.setAttribute('src', 'https://gfycat.com/ifr/' + gfyData.gfyid + '?hd=1');
 			gfyFrame.setAttribute('frameborder', "0");
 			gfyFrame.setAttribute('width', "100%");
-			gfyFrame.setAttribute('height', "480");
-			figure.appendChild(gfyFrame)
+			gfyFrame.setAttribute('height', "100%");
+			gfyFrame.setAttribute('style', 'position:absolute;top:0;left:0;');
+			gfyDiv.appendChild(gfyFrame)
 			
 			{
 				var gfyName = document.createElement("div");
