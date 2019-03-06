@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script src="https://www.gstatic.com/firebasejs/5.8.5/firebase.js"></script>
+	
+	<!-- Firebase App is always required and must be first -->
+	<script src="https://www.gstatic.com/firebasejs/5.8.5/firebase-app.js"></script>
+
+	<!-- Add additional services that you want to use -->
+	<script src="https://www.gstatic.com/firebasejs/5.8.5/firebase-auth.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/5.8.5/firebase-firestore.js"></script>
+
+	<!-- Comment out (or don't include) services that you don't want to use -->
+	<!-- <script src="https://www.gstatic.com/firebasejs/5.8.5/firebase-database.js"></script> -->
+	<!-- <script src="https://www.gstatic.com/firebasejs/5.8.5/firebase-storage.js"></script> -->
+	<!-- <script src="https://www.gstatic.com/firebasejs/5.8.5/firebase-messaging.js"></script> -->
+	<!-- <script src="https://www.gstatic.com/firebasejs/5.8.5/firebase-functions.js"></script> -->
+
+	<script src="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.js"></script>
+	<link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.css" />
+	
+</head>
+
+<body>
+	<b>TwitchLink </b><input type="textfield" id="clipLinkText"></input><br>
+	<b>Comment</b>	<input type="textfield" id="clipCommentText"></input><br>
+	
+	<br>
+	<button id="addClipButton">Add Clip</button>
+	
+	<br>
+	<div id="embedClip">
+	</div>
+
+	<script>
+		// Initialize Firebase
+		var config = {
+		apiKey: "AIzaSyDkxHrIpkBIVIMSuR3Zkr0_X2oiyyyUdAM",
+		authDomain: "hifight-9a09c.firebaseapp.com",
+		databaseURL: "https://hifight-9a09c.firebaseio.com",
+		projectId: "hifight-9a09c",
+		storageBucket: "hifight-9a09c.appspot.com",
+		messagingSenderId: "236845143850"
+		};
+		var app = firebase.initializeApp(config);
+        db = firebase.firestore(app);
+		
+		var provider = new firebase.auth.GoogleAuthProvider();
+		
+		firebase.auth().getRedirectResult().then(function(result) {
+			
+			if (result.credential) {
+				// This gives you a Google Access Token. You can use it to access the Google API.
+				var token = result.credential.accessToken;
+				// ...
+			}
+			// The signed-in user info.
+			var user = result.user;
+			if(!user)
+			{
+				firebase.auth().signInWithRedirect(provider);
+				console.log("No User. Redirect to sign-in");
+			}
+			else
+			{
+				console.log("Sign-in!");
+			}
+		}).catch(function(error) {
+			// Handle Errors here.
+			var errorCode = error.code;
+			var errorMessage = error.message;
+			// The email of the user's account used.
+			var email = error.email;
+			// The firebase.auth.AuthCredential type that was used.
+			var credential = error.credential;
+			// ...
+			
+			console.log("getRedirectResult Error: ", error);
+		});
+		
+		const clipLinkText = document.querySelector("#clipLinkText");
+		const clipCommentText = document.querySelector("#clipCommentText");
+		const addClipButton = document.querySelector("#addClipButton");
+		addClipButton.addEventListener("click", function()
+		{
+			var httpRequest = new XMLHttpRequest();
+
+			httpRequest.addEventListener('load', function()
+			{
+				clipList = JSON.parse(httpRequest.responseText);
+				console.log(clipList);
+				clipList.data.forEach(function(clip, index, array) {
+					var embedClip = document.getElementById('embedClip');
+					embedClip.innerHTML = "";
+					var iframe = document.createElement('iframe');
+					iframe.src = clip.embed_url;
+					iframe.height = 360;
+					iframe.width = 640;
+					iframe.allowfullscreen = true;
+					embedClip.appendChild(iframe);
+					
+					var documentName = clip.title + '-' + clip.id;
+					var newClipDoc = db.collection("clips").doc(documentName);
+					newClipDoc.set({
+						id: clip.id,
+						title: clip.title,
+						url: clip.url,
+						embed_url: clip.embed_url,
+						creator_name: clip.creator_name,
+						video_id: clip.video_id,
+						game_id: clip.game_id,
+						created_at: clip.created_at,
+						thumbnail_url: clip.thumbnail_url,
+						comment: clipCommentText.value
+					}, {merge: true })
+					.then(function() {
+						console.log("Added " + documentName);
+						
+						// Get game name
+						var gameIdHttpRequest = new XMLHttpRequest();
+						gameIdHttpRequest.addEventListener('load', function()
+						{
+							gameData = JSON.parse(gameIdHttpRequest.responseText);
+							console.log(gameData);
+							if(gameData.data.length > 0)
+							{
+								var gameName = gameData.data[0].name;
+								newClipDoc.set({
+									game_name : gameName
+								}, {merge: true })
+								.then(function() {
+									console.log("Game: " + gameName);
+									
+									newClipDoc.get().then(function(doc) {
+										if (doc.exists) {
+											var dataText = document.createElement('DIV');
+											dataText.innerHTML = doc.data().title + " " + doc.data().comment ;
+											embedClip.appendChild(dataText);
+										} else {
+											// doc.data() will be undefined in this case
+											console.log("No such document!");
+										}
+									}).catch(function(error) {
+										console.log("Error getting document:", error);
+									});
+								})
+								.catch(function(error) {
+									console.error("Error writing document: ", error);
+								});
+							}
+						});
+						gameIdHttpRequest.open('GET', 'https://api.twitch.tv/helix/games?id=' + clip.game_id);
+						gameIdHttpRequest.setRequestHeader('Client-ID', 'bq7fu1ivn6tjovq0i8z8l5u6hkrznb');
+						gameIdHttpRequest.send();
+					})
+					.catch(function(error) {
+						console.error("Error writing document: ", error);
+					});
+				});
+			});
+			
+			var clipId = clipLinkText.value;
+			httpRequest.open('GET', 'https://api.twitch.tv/helix/clips?id=' + clipId);
+			httpRequest.setRequestHeader('Client-ID', 'bq7fu1ivn6tjovq0i8z8l5u6hkrznb');
+			httpRequest.send();
+		});
+		
+		
+	</script>
+</body>
+	
+</html>
