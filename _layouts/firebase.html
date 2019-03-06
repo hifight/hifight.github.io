@@ -160,6 +160,10 @@
 			});
 			
 			var clipId = clipLinkText.value;
+			if(clipId.lastIndexOf('/') >= 0)
+				clipId = clipId.substring(clipId.lastIndexOf('/') + 1);
+			console.log("clipId=" + clipId);
+			
 			httpRequest.open('GET', 'https://api.twitch.tv/helix/clips?id=' + clipId);
 			httpRequest.setRequestHeader('Client-ID', 'bq7fu1ivn6tjovq0i8z8l5u6hkrznb');
 			httpRequest.send();
