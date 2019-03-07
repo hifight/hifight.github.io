@@ -1,8 +1,11 @@
-<!DOCTYPE html>
-<html>
-<head>
+---
+layout: default
+---
+
+<div class="well">
+
 	<script src="https://www.gstatic.com/firebasejs/5.8.5/firebase.js"></script>
-	
+
 	<!-- Firebase App is always required and must be first -->
 	<script src="https://www.gstatic.com/firebasejs/5.8.5/firebase-app.js"></script>
 
@@ -18,16 +21,14 @@
 
 	<script src="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.js"></script>
 	<link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.css" />
-	
-</head>
 
-<body>
-	<b>TwitchLink </b><input type="textfield" id="clipLinkText"></input><br>
-	<b>Comment</b>	<input type="textfield" id="clipCommentText"></input><br>
-	
+	<b>Link: </b> <input type="textfield" id="clipLinkText" style='width:100%'></input><br>
+	<b>Comment: </b>	<input type="textfield" id="clipCommentText" style='width:100%'></input><br>
+	<b>Tag: </b>	<input type="textfield" id="tagText" style='width:100%'></input><br>
+
 	<br>
 	<button id="addClipButton">Add Clip</button>
-	
+
 	<br>
 	<div id="embedClip">
 	</div>
@@ -43,7 +44,7 @@
 		messagingSenderId: "236845143850"
 		};
 		var app = firebase.initializeApp(config);
-        db = firebase.firestore(app);
+		db = firebase.firestore(app);
 		
 		var provider = new firebase.auth.GoogleAuthProvider();
 		
@@ -80,6 +81,7 @@
 		
 		const clipLinkText = document.querySelector("#clipLinkText");
 		const clipCommentText = document.querySelector("#clipCommentText");
+		const tagText = document.querySelector("#tagText");
 		const addClipButton = document.querySelector("#addClipButton");
 		addClipButton.addEventListener("click", function()
 		{
@@ -111,7 +113,8 @@
 						game_id: clip.game_id,
 						created_at: clip.created_at,
 						thumbnail_url: clip.thumbnail_url,
-						comment: clipCommentText.value
+						comment: clipCommentText.value,
+						tags: tagText.value.split(/[ ,]+/).filter(Boolean)
 					}, {merge: true })
 					.then(function() {
 						console.log("Added " + documentName);
@@ -134,7 +137,14 @@
 									newClipDoc.get().then(function(doc) {
 										if (doc.exists) {
 											var dataText = document.createElement('DIV');
-											dataText.innerHTML = doc.data().title + " " + doc.data().comment ;
+											var text = "title: " + doc.data().title + "<br>";
+											text += "comment: " + doc.data().comment + "<br>";
+											text += "game_name: " + doc.data().game_name + "<br>";
+											text += "tags: [";
+											for(i = 0; i < doc.data().tags.length; i++)
+												text += doc.data().tags[i] + ", ";
+											text += "]<br>";
+											dataText.innerHTML = text;
 											embedClip.appendChild(dataText);
 										} else {
 											// doc.data() will be undefined in this case
@@ -171,6 +181,4 @@
 		
 		
 	</script>
-</body>
-	
-</html>
+</div>
