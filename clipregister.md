@@ -1,3 +1,3 @@
 ---
-layout: firebase
+layout: clipregister
 ---

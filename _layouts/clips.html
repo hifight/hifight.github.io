@@ -1,0 +1,112 @@
+---
+layout: default
+---
+
+<div class="well">
+
+	<script src="https://www.gstatic.com/firebasejs/5.8.5/firebase.js"></script>
+
+	<!-- Firebase App is always required and must be first -->
+	<script src="https://www.gstatic.com/firebasejs/5.8.5/firebase-app.js"></script>
+
+	<!-- Add additional services that you want to use -->
+	<script src="https://www.gstatic.com/firebasejs/5.8.5/firebase-auth.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/5.8.5/firebase-firestore.js"></script>
+
+	<!-- Comment out (or don't include) services that you don't want to use -->
+	<!-- <script src="https://www.gstatic.com/firebasejs/5.8.5/firebase-database.js"></script> -->
+	<!-- <script src="https://www.gstatic.com/firebasejs/5.8.5/firebase-storage.js"></script> -->
+	<!-- <script src="https://www.gstatic.com/firebasejs/5.8.5/firebase-messaging.js"></script> -->
+	<!-- <script src="https://www.gstatic.com/firebasejs/5.8.5/firebase-functions.js"></script> -->
+
+	<script src="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.js"></script>
+	<link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.css" />
+
+	<div id="gfy-list">
+	</div>
+
+	<script>
+		
+		var parentDiv = document.getElementById('gfy-list');
+	
+		// Initialize Firebase
+		var config = {
+		apiKey: "AIzaSyDkxHrIpkBIVIMSuR3Zkr0_X2oiyyyUdAM",
+		authDomain: "hifight-9a09c.firebaseapp.com",
+		databaseURL: "https://hifight-9a09c.firebaseio.com",
+		projectId: "hifight-9a09c",
+		storageBucket: "hifight-9a09c.appspot.com",
+		messagingSenderId: "236845143850"
+		};
+		var app = firebase.initializeApp(config);
+		db = firebase.firestore(app);
+		
+		db.collection("clips").orderBy("created_at", "desc").limit(5)
+		.get()
+		.then(function(querySnapshot) {
+			querySnapshot.forEach(function(doc) {
+				// doc.data() is never undefined for query doc snapshots
+				console.log(doc.id, " => ", doc.data());
+				
+				addClipData(doc.data());
+			});
+		})
+		.catch(function(error) {
+			console.log("Error getting documents: ", error);
+		});
+		
+		function addClipData(clipData)
+		{
+			{
+				var figure = document.createElement("FIGURE");
+				figure.className = "entry-gfy";
+				parentDiv.appendChild(figure);
+				
+				var gfyDiv = document.createElement("div");
+				gfyDiv.setAttribute('style', 'position:relative; padding-bottom:56.25%');
+				figure.appendChild(gfyDiv)
+				var clipFrame = document.createElement("iframe");
+				clipFrame.setAttribute('src', clipData.embed_url + '&autoplay=false');
+				clipFrame.setAttribute('frameborder', "0");
+				clipFrame.setAttribute('width', "100%");
+				clipFrame.setAttribute('height', "100%");
+				clipFrame.setAttribute('allowfullscreen', true);
+				clipFrame.setAttribute('autoplay', false);
+				clipFrame.setAttribute('style', 'position:absolute;top:0;left:0;');
+				gfyDiv.appendChild(clipFrame);
+			}
+			
+			{
+				var clipComment = document.createElement("div");
+				clipComment.className = "clip-comment";
+				clipComment.innerHTML = clipData.comment;
+				parentDiv.appendChild(clipComment);
+				
+				var clipDate = document.createElement("div");
+				clipDate.className = "clip-date";
+				clipDate.innerHTML = new Date(clipData.created_at).toLocaleString();
+				parentDiv.appendChild(clipDate);
+			}
+			
+			{
+				var tagList = document.createElement("div");
+				tagList.className = "clip-tags";
+				parentDiv.appendChild(tagList);
+				for(i = 0; i < clipData.tags.length; i++)
+				{
+					var tag = document.createElement("a");
+					tag.className = "clip-tag";
+					tag.setAttribute('href', '#');
+					tag.innerHTML = clipData.tags[i];
+					tagList.appendChild(tag);
+				}
+			}
+			
+			var hr = document.createElement("hr");
+			parentDiv.appendChild(hr);
+			
+		}
+
+		
+	</script>
+</div>

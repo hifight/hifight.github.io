@@ -237,6 +237,45 @@ footer {
 .gfy-share:hover {
     color: #555;
 }
+.clip-comment{
+    font-size: 18px;
+    text-align: left;
+	margin: 10px 0 5px 0;
+}
+.clip-date{
+    font-size: 16px;
+    color: #777;
+    text-align: left;
+}
+
+.clip-tags {
+  list-style: none;
+  margin: 0 0 0 0;
+  overflow: hidden; 
+  padding: 0;
+}
+
+.clip-tag {
+  float: left; 
+  background: #ddd;
+  border-radius: 5px 5px 5px 5px;
+  color: #666;
+  display: inline-block;
+  font-size: 12px;
+  height: 22px;
+  line-height: 22px;
+  padding: 0 10px 0 10px;
+  margin: 0px 5px 5px 0px;
+  position: relative;
+  text-decoration: none;
+  -webkit-transition: color 0.2s;
+}
+
+.clip-tag:hover {
+  background-color: crimson;
+  color: white;
+}
+
 #refreshButton {
     position: fixed; /* Fixed/sticky position */
     bottom: 20px; /* Place the button at the bottom of the page */
