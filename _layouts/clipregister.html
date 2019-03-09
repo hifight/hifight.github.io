@@ -33,6 +33,9 @@ layout: default
 	<div id="embedClip">
 	</div>
 
+	<hr>
+	<button id="updateViewButton">Update View Count</button>
+	
 	<script>
 		// Initialize Firebase
 		var config = {
@@ -118,6 +121,7 @@ layout: default
 						created_at: clip.created_at,
 						thumbnail_url: clip.thumbnail_url,
 						comment: clipCommentText.value,
+						view_count: clip.view_count,
 						tags: tagText.value.split(/[ ,]+/).filter(Boolean)
 					}, {merge: true })
 					.then(function() {
@@ -182,6 +186,46 @@ layout: default
 			httpRequest.setRequestHeader('Client-ID', 'bq7fu1ivn6tjovq0i8z8l5u6hkrznb');
 			httpRequest.send();
 		});
+		
+		const updateViewButton = document.querySelector("#updateViewButton");
+		updateViewButton.addEventListener("click", function()
+		{
+			db.collection("clips")
+				.get()
+				.then(function(querySnapshot) {
+					querySnapshot.forEach(function(doc) {
+						var httpRequest = new XMLHttpRequest();
+						httpRequest.addEventListener('load', function()
+						{
+							clipList = JSON.parse(httpRequest.responseText);
+							console.log(clipList);
+							clipList.data.forEach(function(clip, index, array) {
+								var documentName = clip.title + '-' + clip.id;
+								var clipDoc = db.collection("clips").doc(documentName);
+								console.log(documentName + ": " + clip.view_count);
+								clipDoc.set({
+										view_count: clip.view_count,
+									}, {merge: true })
+									.then(function() {
+												
+									})
+									.catch(function(error) {
+										console.error("Error writing document: ", error);
+									});
+							});
+						});
+						
+						httpRequest.open('GET', 'https://api.twitch.tv/helix/clips?id=' + doc.data().id);
+						httpRequest.setRequestHeader('Client-ID', 'bq7fu1ivn6tjovq0i8z8l5u6hkrznb');
+						httpRequest.send();
+					});
+				})
+				.catch(function(error) {
+					console.log("Error getting documents: ", error);
+				});	
+			
+		});
+		
 		
 	</script>
 </div>

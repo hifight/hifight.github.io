@@ -22,6 +22,14 @@ layout: default
 	<script src="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.js"></script>
 	<link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.css" />
 
+	<b>Sort:</b>
+	<select id="sortSelector" onchange="onSortSelected();">
+		<option value="recent">Recent</option>
+		<option value="views">Views</option>
+	</select>
+	<br>
+	<br>
+	
 	<div id="gfy-list">
 	</div>
 	
@@ -39,6 +47,20 @@ layout: default
 		var parentDiv = document.getElementById('gfy-list');
 		var showMoreButton = document.getElementById('showMoreButton');
 		showMoreButton.addEventListener("click", addClips);
+		
+		var sortParam = url.searchParams.get("sort");
+		var sortSelector = document.getElementById('sortSelector');
+		var sortBy = "created_at";
+		if(sortParam == "recent")
+		{
+			sortSelector.value = sortParam;
+			sortBy = "created_at";
+		}
+		else if(sortParam == "views")
+		{
+			sortSelector.value = sortParam;
+			sortBy = "view_count";
+		}
 	
 		// Initialize Firebase
 		var config = {
@@ -67,7 +89,7 @@ layout: default
 				if(lastDocument != null)
 				{
 					query = clipRef.where("tags", "array-contains", searchTag)
-						.orderBy("created_at", "desc")
+						.orderBy(sortBy, "desc")
 						.startAfter(lastDocument).limit(clipNum);
 						
 				}
@@ -75,7 +97,7 @@ layout: default
 				else
 				{
 					query = clipRef.where("tags", "array-contains", searchTag)
-						.orderBy("created_at", "desc").limit(clipNum);
+						.orderBy(sortBy, "desc").limit(clipNum);
 				}
 			}
 			else
@@ -83,13 +105,13 @@ layout: default
 				// if there is last document then query next documents
 				if(lastDocument != null)
 				{
-					query = clipRef.orderBy("created_at", "desc")
+					query = clipRef.orderBy(sortBy, "desc")
 						.startAfter(lastDocument).limit(clipNum);
 				}
 				// First add when the page is loaded
 				else
 				{
-					query = clipRef.orderBy("created_at", "desc").limit(clipNum);
+					query = clipRef.orderBy(sortBy, "desc").limit(clipNum);
 				}
 			}
 			
@@ -159,7 +181,14 @@ layout: default
 				{
 					var tag = document.createElement("a");
 					tag.className = "clip-tag";
-					tag.setAttribute('href', "{{ site.url }}/clips/?tag=" + clipData.tags[i]);
+					if(sortParam != null)
+					{
+						tag.setAttribute('href', "{{ site.url }}/clips/?sort=" + sortParam + "&tag=" + clipData.tags[i]);
+					}
+					else
+					{
+						tag.setAttribute('href', "{{ site.url }}/clips/?tag=" + clipData.tags[i]);
+					}
 					tag.innerHTML = clipData.tags[i];
 					tagList.appendChild(tag);
 				}
@@ -168,6 +197,18 @@ layout: default
 			var hr = document.createElement("hr");
 			parentDiv.appendChild(hr);
 			
+		}
+		
+		function onSortSelected()
+		{
+			if(searchTag != null)
+			{
+				window.open("{{ site.url }}/clips/?tag=" + searchTag + "&sort=" + sortSelector.value,"_self");
+			}
+			else
+			{
+				window.open("{{ site.url }}/clips/?sort=" + sortSelector.value,"_self");
+			}
 		}
 
 		

@@ -157,12 +157,4 @@
 			addGfyData(gfydiv, shuffledGfyArray[0])
 		//setGfy(shuffledGfyArray[0]);
 		
-		var shuffledPlayerArray = shuffle(playerArray);
-		var div = document.getElementById('player-list');
-		var i;
-		for(i = 0; i < 3; i++)
-		{
-			addPlayerData(div, shuffledPlayerArray[i]);
-		}
-		
 })();

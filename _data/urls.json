@@ -5,9 +5,9 @@
     "icon": "fa-home",
   },
   {
-    "text": "Players",
-    "url": "/player/",
-    "icon": "fa-users",
+    "text": "Clips",
+    "url": "/clips/",
+    "icon": "fa-video-camera",
   },
   {
     "text": "GIFs",
