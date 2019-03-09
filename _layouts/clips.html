@@ -24,10 +24,16 @@ layout: default
 
 	<div id="gfy-list">
 	</div>
-
+	
+	<div class="showmore">
+		<button class="showmore-button" id="showMoreButton">Show More</button>
+	</div>
+	
 	<script>
 		
 		var parentDiv = document.getElementById('gfy-list');
+		var showMoreButton = document.getElementById('showMoreButton');
+		showMoreButton.addEventListener("click", addClips);
 	
 		// Initialize Firebase
 		var config = {
@@ -41,22 +47,49 @@ layout: default
 		var app = firebase.initializeApp(config);
 		db = firebase.firestore(app);
 		
-		db.collection("clips").orderBy("created_at", "desc").limit(5)
-		.get()
-		.then(function(querySnapshot) {
-			querySnapshot.forEach(function(doc) {
-				// doc.data() is never undefined for query doc snapshots
-				console.log(doc.id, " => ", doc.data());
-				
-				addClipData(doc.data());
-			});
-		})
-		.catch(function(error) {
-			console.log("Error getting documents: ", error);
-		});
+		var lastDocument = null;
+		addClips();
 		
-		function addClipData(clipData)
+		function addClips()
 		{
+			var clipNum = 5;
+			if(lastDocument == null)
+			{
+				db.collection("clips")
+					.orderBy("created_at", "desc")
+					.limit(clipNum)
+					.get().then(function(querySnapshot) {
+					querySnapshot.forEach(function(doc) {
+						//console.log(doc.id, " => ", doc.data());
+						addClipData(doc);
+					});
+				})
+				.catch(function(error) {
+					console.log("Error getting documents: ", error);
+				});
+			}
+			else
+			{
+				db.collection("clips")
+					.orderBy("created_at", "desc")
+					.startAfter(lastDocument)
+					.limit(clipNum)
+					.get().then(function(querySnapshot) {
+					querySnapshot.forEach(function(doc) {
+						//console.log(doc.id, " => ", doc.data());
+						addClipData(doc);
+					});
+				})
+				.catch(function(error) {
+					console.log("Error getting documents: ", error);
+				});
+			}
+		}
+		
+		function addClipData(doc)
+		{
+			lastDocument = doc;
+			var clipData = doc.data();
 			{
 				var figure = document.createElement("FIGURE");
 				figure.className = "entry-gfy";

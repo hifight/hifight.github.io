@@ -276,6 +276,31 @@ footer {
   color: white;
 }
 
+.showmore{
+  margin: auto;
+  text-align: center;
+}
+
+.showmore-button {
+  background-color: white;
+  border: none;
+  color: black;
+  padding: 8px 16px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+  cursor: pointer;
+  border: 2px solid #008CBA;
+  border-radius: 5px 5px 5px 5px;
+}
+.showmore-button:hover {
+  background-color: #008CBA;
+  color: white;
+}
+
 #refreshButton {
     position: fixed; /* Fixed/sticky position */
     bottom: 20px; /* Place the button at the bottom of the page */
