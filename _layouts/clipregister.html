@@ -122,7 +122,7 @@ layout: default
 						thumbnail_url: clip.thumbnail_url,
 						comment: clipCommentText.value,
 						view_count: clip.view_count,
-						tags: tagText.value.split(/[ ,]+/).filter(Boolean)
+						tags: tagArray
 					}, {merge: true })
 					.then(function() {
 						console.log("Added " + documentName);
