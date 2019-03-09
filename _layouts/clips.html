@@ -31,6 +31,11 @@ layout: default
 	
 	<script>
 		
+		// Check if there is tag parameter in the url
+		var url_string = window.location.href
+		var url = new URL(url_string);
+		var searchTag = url.searchParams.get("tag");
+		
 		var parentDiv = document.getElementById('gfy-list');
 		var showMoreButton = document.getElementById('showMoreButton');
 		showMoreButton.addEventListener("click", addClips);
@@ -53,37 +58,62 @@ layout: default
 		function addClips()
 		{
 			var clipNum = 5;
-			if(lastDocument == null)
+			var clipRef = db.collection("clips");
+			var query = null;
+			if(searchTag != null)
 			{
-				db.collection("clips")
-					.orderBy("created_at", "desc")
-					.limit(clipNum)
-					.get().then(function(querySnapshot) {
-					querySnapshot.forEach(function(doc) {
-						//console.log(doc.id, " => ", doc.data());
-						addClipData(doc);
-					});
-				})
-				.catch(function(error) {
-					console.log("Error getting documents: ", error);
-				});
+				searchTag = searchTag.toLowerCase();
+				// if there is last document then query next documents
+				if(lastDocument != null)
+				{
+					query = clipRef.where("tags", "array-contains", searchTag)
+						.orderBy("created_at", "desc")
+						.startAfter(lastDocument).limit(clipNum);
+						
+				}
+				// First add when the page is loaded
+				else
+				{
+					query = clipRef.where("tags", "array-contains", searchTag)
+						.orderBy("created_at", "desc").limit(clipNum);
+				}
 			}
 			else
 			{
-				db.collection("clips")
-					.orderBy("created_at", "desc")
-					.startAfter(lastDocument)
-					.limit(clipNum)
-					.get().then(function(querySnapshot) {
+				// if there is last document then query next documents
+				if(lastDocument != null)
+				{
+					query = clipRef.orderBy("created_at", "desc")
+						.startAfter(lastDocument).limit(clipNum);
+				}
+				// First add when the page is loaded
+				else
+				{
+					query = clipRef.orderBy("created_at", "desc").limit(clipNum);
+				}
+			}
+			
+			if(query != null)
+			{
+				query.get().then(function(querySnapshot) {					
+					var addedClip = 0;
 					querySnapshot.forEach(function(doc) {
 						//console.log(doc.id, " => ", doc.data());
 						addClipData(doc);
+						addedClip += 1;
 					});
+					
+					if(addedClip == 0)
+					{
+						showMoreButton.disabled = true;
+						showMoreButton.innerHTML = "No Results";
+					}
 				})
 				.catch(function(error) {
 					console.log("Error getting documents: ", error);
 				});
 			}
+			
 		}
 		
 		function addClipData(doc)
@@ -129,7 +159,7 @@ layout: default
 				{
 					var tag = document.createElement("a");
 					tag.className = "clip-tag";
-					tag.setAttribute('href', '#');
+					tag.setAttribute('href', "{{ site.url }}/clips/?tag=" + clipData.tags[i]);
 					tag.innerHTML = clipData.tags[i];
 					tagList.appendChild(tag);
 				}

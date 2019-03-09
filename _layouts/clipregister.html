@@ -103,6 +103,10 @@ layout: default
 					
 					var documentName = clip.title + '-' + clip.id;
 					var newClipDoc = db.collection("clips").doc(documentName);
+					var tagArray = tagText.value.split(/[ ,]+/).filter(Boolean);
+					for(i = 0; i < tagArray.length; i++)
+						tagArray[i] = tagArray[i].toLowerCase();
+						
 					newClipDoc.set({
 						id: clip.id,
 						title: clip.title,
@@ -178,7 +182,6 @@ layout: default
 			httpRequest.setRequestHeader('Client-ID', 'bq7fu1ivn6tjovq0i8z8l5u6hkrznb');
 			httpRequest.send();
 		});
-		
 		
 	</script>
 </div>
