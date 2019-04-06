@@ -139,6 +139,7 @@ layout: default
 						title: clip.title,
 						url: clip.url,
 						embed_url: clip.embed_url,
+						broadcaster_name: clip.broadcaster_name,
 						creator_name: clip.creator_name,
 						video_id: clip.video_id,
 						game_id: clip.game_id,
@@ -184,10 +185,10 @@ layout: default
 											text += "]<br>";
 											if(getData.isTournamentResult)
 											{
-												text += "tournamentName: " + getData.tournamentName + "<br>";
-												text += "tournamentTag: " + getData.tournamentTag + "<br>";
-												text += "winnerPlayer: " + getData.winnerPlayer + "<br>";
-												text += "winnerCharacter: " + getData.winnerCharacter + "<br>";
+												text += "【" + getData.tournamentName + "】<br>";
+												text += getData.winnerPlayer + " (" + getData.winnerCharacter + ")<br>";
+												text += "https://www.twitch.tv/" + getData.broadcaster_name + "<br>";
+												text += "https://www.twitch.tv/videos/" + getData.video_id + "<br>";
 											}
 											dataText.innerHTML = text;
 											embedClip.appendChild(dataText);
