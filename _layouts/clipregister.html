@@ -42,6 +42,8 @@ layout: default
 
 	<hr>
 	<button id="updateViewButton">Update View Count</button>
+	<hr>
+	<button id="exportTournamentCSVButton">Export Tournament Result to CSV</button>
 	
 	<script>
 		// Initialize Firebase
@@ -274,6 +276,34 @@ layout: default
 			var d = new Date();
 			console.log("send:" + d + "");
 		}
+		
+		const exportTournamentCSVButton = document.querySelector("#exportTournamentCSVButton");
+		exportTournamentCSVButton.addEventListener("click", function()
+		{
+			db.collection("clips")
+			.where("isTournamentResult", "==", true)
+			.orderBy("created_at")
+			.get()
+			.then(function(querySnapshot) {
+				var myCsv = "created_at, tournament_name, winner_player, winner_character, clip_url\n";
+				querySnapshot.forEach(function(doc) {
+					if (doc.exists) {
+						var getData = doc.data();
+						myCsv += getData.created_at + ", ";
+						myCsv += getData.tournamentName + ", ";
+						myCsv += getData.winnerPlayer + ", ";
+						myCsv += getData.winnerCharacter + ", ";
+						myCsv += getData.url + "\n";
+					} 
+				});
+				
+				window.open('data:text/csv;charset=utf-8,' + escape(myCsv));
+				
+			})
+			.catch(function(error) {
+				console.log("Error getting documents: ", error);
+			});	
+		});
 		
 	</script>
 </div>
