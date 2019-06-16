@@ -14,17 +14,19 @@ where spacing, hit confirm and whiff punish are keys to achieve victory.
 
 <img class="row-picture" src="/static/img/footsies/footsies_00.jpg">
 
-This is a fun little project for the fighting game community and 
-for own practice developing a game by myself.
+This is a fun little project for the fighting game community and for my game development practice.
 I am objectively bad at art and music but that went kinda well with theme of the game. 
 The animation in this game are, obviously, heavily inspired by the most iconic you-know-who fighting game character.
-
-Although I only tested this game mostly with CPU, when I actually tried this game with my friend, 
-we actually had a lot of fun! So, I hope that everyone try this game and have some fun as well :D
 
 <img class="row-picture" src="/static/img/footsies/footsies_01.jpg">
 
 <h3>Download (PC)</h3> 
+<b><u><a href="https://github.com/hifight/Footsies/releases/download/1.2.0/FOOTSIES_v1_2_0.zip" download>FOOTSIES v1.2.0</a></u></b>
+
+- Increase overall game speed
+- Special moves balance adjustment
+- Add command list and tutorial to title menu
+- Separate BGM and SE sound toggle
 
 <b><u><a href="https://github.com/hifight/Footsies/releases/download/1.0.5/FOOTSIES_v1_0_5.zip" download>FOOTSIES v1.0.5</a></u></b>
 
@@ -77,7 +79,7 @@ One can be performed by neutral release, and forward/backward release for the ot
 
 <img class="row-picture" src="/static/img/footsies/footsies_04.jpg">
 
-<img class="row-picture" src="/static/img/footsies/Footsies_FrameData.jpg">
+<img class="row-picture" src="/static/img/footsies/Footsies_FrameData_v1_2_0.jpg">
 
 Shoutout to <a href="https://twitter.com/WydD">@WydD</a> and his amazing <u><a href="https://sfvsim.com/">sfvsim</a></u> which help me a lot during the development of this game.
 
@@ -87,6 +89,6 @@ Whether you like the game or not, feel free to leave some comments about your ex
 
 If you like the game then invite your friends to play this game too! Seeing some tournament for this game would be a dream come true for me.
 
-Finally, if you really really like this game so much and really want to support me, then you can do so <a href="https://www.paypal.me/HiFight" target="_blank">here</a>.
+Finally, if you really really like this game so much and really want to support me, then you can do so <a href="https://www.patreon.com/HiFight" target="_blank">here</a>.
 
 <hr/>
