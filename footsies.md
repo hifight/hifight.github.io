@@ -28,7 +28,7 @@ The animation in this game are, obviously, heavily inspired by the most iconic y
 - Add command list and tutorial to title menu
 - Separate BGM and SE sound toggle
 
-<b><u><a href="https://github.com/hifight/Footsies/releases/download/1.0.5/FOOTSIES_v1_0_5.zip" download>FOOTSIES v1.0.5</a></u></b>
+<u><a href="https://github.com/hifight/Footsies/releases/download/1.0.5/FOOTSIES_v1_0_5.zip" download>FOOTSIES v1.0.5</a></u>
 
 - Can now continue playing vs CPU mode until player loses three rounds
 - Count and save the number of win in vs CPU mode
