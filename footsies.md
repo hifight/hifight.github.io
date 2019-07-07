@@ -57,9 +57,13 @@ The animation in this game are, obviously, heavily inspired by the most iconic y
 ※You can config keys/buttons input after launching the game, although XInput can't be set on config windows, 
 XInput controller should work fine in the game.
 
+<h3>Download (iOS)</h3> 
+
+<b><u><a href="https://apps.apple.com/us/app/footsies-by-hifight/id1469966413" download>FOOTSIES for iOS</a></u></b>
+
 <h3>Download (Android)</h3> 
 
-<b><u><a href="https://play.google.com/store/apps/details?id=com.hifight.FOOTSIES" download>FOOTSIES for Android </a></u></b>
+<b><u><a href="https://play.google.com/store/apps/details?id=com.hifight.FOOTSIES" download>FOOTSIES for Android</a></u></b>
 
 
 <img class="row-picture" src="/static/img/footsies/footsies_03.jpg">
