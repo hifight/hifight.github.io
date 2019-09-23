@@ -89,7 +89,13 @@ Shoutout to <a href="https://twitter.com/WydD">@WydD</a> and his amazing <u><a h
 
 <hr/>
 
-Whether you like the game or not, feel free to leave some comments about your experience on my <b><u><a href="https://twitter.com/">twitter</a></u></b>
+<h3><a href="https://store.line.me/stickershop/product/8388516/">LINE Animated Stickers</h3></a>
+
+<img class="row-picture" src="/static/img/footsies/Footsies_Line.JPG">
+
+<hr/>
+
+Whether you like the game or not, feel free to leave some comments about your experience on my <b><u><a href="https://twitter.com/HiFightTH">twitter</a></u></b>
 
 If you like the game then invite your friends to play this game too! Seeing some tournament for this game would be a dream come true for me.
 
