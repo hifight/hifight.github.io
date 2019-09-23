@@ -89,7 +89,7 @@ Shoutout to <a href="https://twitter.com/WydD">@WydD</a> and his amazing <u><a h
 
 <hr/>
 
-<h3><a href="https://store.line.me/stickershop/product/8388516/">LINE Animated Stickers</h3></a>
+<h3><a href="https://store.line.me/stickershop/product/8388516/">LINE Animated Stickers</a></h3>
 
 <img class="row-picture" src="/static/img/footsies/Footsies_Line.JPG">
 
