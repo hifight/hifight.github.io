@@ -21,6 +21,10 @@ The animation in this game are, obviously, heavily inspired by the most iconic y
 <img class="row-picture" src="/static/img/footsies/footsies_01.jpg">
 
 <h3>Download (PC)</h3> 
+<b><u><a href="https://github.com/hifight/Footsies/releases/tag/1.2.2">FOOTSIES v1.2.2 (Online Beta)</a></u></b>
+
+- Play online with built-in Parsec
+
 <b><u><a href="https://github.com/hifight/Footsies/releases/download/1.2.0/FOOTSIES_v1_2_0.zip" download>FOOTSIES v1.2.0</a></u></b>
 
 - Increase overall game speed
