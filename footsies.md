@@ -23,23 +23,16 @@ The animation in this game are, obviously, heavily inspired by the most iconic y
 <h3>Download (PC)</h3> 
 <b><u><a href="https://github.com/hifight/Footsies/releases/tag/1.5.0">FOOTSIES v1.5.0</a></u></b>
 
-・Battle balance changes
-・New Unity Input System
-　・PS4, Switch controller support
-・New battle UI
-　・Hit confirm frame counter
-　・Counter, punish UI
-・Added pause menu
-　・Command list
-　・Hitbox, frame advantage, input on/off
-・Added result screen and rematch option
-・Renew main menu
-・Added option menu
-　・Resolution, sound settings
-　・Key config
-　・Dark theme
-・Added button check screen (can be turned on/off in option)
-・Added hit confirm training mode
+- Battle balance changes
+- New Unity Input System (PS4, Switch controller support)
+- New battle UI 
+- Added pause menu (Command list, Hitbox, frame advantage on/off)
+- Added result screen and rematch option
+- Renew main menu
+- Added option menu
+- Added Dark theme
+- Added button check screen (can be turned on/off in option)
+- Added hit confirm training mode
 
 <b><u><a href="https://github.com/hifight/Footsies/releases/download/1.2.0/FOOTSIES_v1_2_0.zip" download>FOOTSIES v1.2.0</a></u></b>
 
