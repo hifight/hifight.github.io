@@ -20,7 +20,7 @@ The animation in this game are, obviously, heavily inspired by the most iconic y
 
 <img class="row-picture" src="/static/img/footsies/footsies_01.jpg">
 
-<img class="row-picture" src="/static/img/footsies/rollback_00.jpg">
+<img class="row-picture" src="/static/img/footsies/rollback_00.png">
 
 <h3>FOOTSIES Rollback Edition</h3> 
 <b><u><a href="https://store.steampowered.com/app/1344740/FOOTSIES_Rollback_Edition/">Steam</a></u></b>
