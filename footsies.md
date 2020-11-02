@@ -109,15 +109,9 @@ XInput controller should work fine in the game.
 One can be performed by neutral release, and forward/backward release for the other one.
 - If normal moves connect with the opponent, whether on hit or block, it can be canceled into neutral special move by pressing an attack button again.
 - Forward and backward dashes can be performed by pressing forward/backward twice.
-- Hitbox/hurtbox/frame information can be toggle on and off by pressing F12.
-- Press F1 to pause/resume the game. While pausing, pressing F2 will play the game for 1 frame.
 
 
 <img class="row-picture" src="/static/img/footsies/footsies_04.jpg">
-
-<img class="row-picture" src="/static/img/footsies/Footsies_FrameData_v1_2_0.jpg">
-
-Shoutout to <a href="https://twitter.com/WydD">@WydD</a> and his amazing <u><a href="https://sfvsim.com/">sfvsim</a></u> which help me a lot during the development of this game.
 
 <hr/>
 
