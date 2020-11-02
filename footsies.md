@@ -24,7 +24,8 @@ The animation in this game are, obviously, heavily inspired by the most iconic y
 
 <h3>FOOTSIES Rollback Edition</h3> 
 <b><u><a href="https://store.steampowered.com/app/1344740/FOOTSIES_Rollback_Edition/">Steam</a></u></b>
-<b><u><a href="https://discord.gg/PEgP3y3">Official FOOTSIES Discord</a></u></b>
+
+<b><u><a href="https://discord.gg/PEgP3y3">Official Discord</a></u></b>
 
 Features
 - Arcade Mode
@@ -35,6 +36,8 @@ Features
 - Command list with frame data
 - Hitbox viewer
 - Hit Confirm and Whiff Punish Minigames
+
+<hr/>
 
 <h3>Free Version (PC)</h3> 
 <b><u><a href="https://github.com/hifight/Footsies/releases/tag/1.5.0">FOOTSIES v1.5.0</a></u></b>
