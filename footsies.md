@@ -20,7 +20,23 @@ The animation in this game are, obviously, heavily inspired by the most iconic y
 
 <img class="row-picture" src="/static/img/footsies/footsies_01.jpg">
 
-<h3>Download (PC)</h3> 
+<img class="row-picture" src="/static/img/footsies/rollback_00.jpg">
+
+<h3>FOOTSIES Rollback Edition</h3> 
+<b><u><a href="https://store.steampowered.com/app/1344740/FOOTSIES_Rollback_Edition/">Steam</a></u></b>
+<b><u><a href="https://discord.gg/PEgP3y3">Official FOOTSIES Discord</a></u></b>
+
+Features
+- Arcade Mode
+- Offline versus mode (player/cpu)
+- Online versus mode (rollback netcode)
+- Online lobby (up to 10 players, chat, spectators)
+- Training mode
+- Command list with frame data
+- Hitbox viewer
+- Hit Confirm and Whiff Punish Minigames
+
+<h3>Free Version (PC)</h3> 
 <b><u><a href="https://github.com/hifight/Footsies/releases/tag/1.5.0">FOOTSIES v1.5.0</a></u></b>
 
 - Battle balance changes
