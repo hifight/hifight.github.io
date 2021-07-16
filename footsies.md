@@ -29,6 +29,10 @@ The animation in this game are, obviously, heavily inspired by the most iconic y
 
 <b><u><a href="https://play.google.com/store/apps/details?id=com.HiFight.FOOTSIES">Google Play (Free)</a></u></b>
 
+<b><u><a href="https://www.amazon.com/gp/product/B096LW2CXN">Amazon App (Full)</a></u></b>
+
+<b><u><a href="https://www.amazon.com/gp/product/B095H2H9MK">Amazon App (Free)</a></u></b>
+
 <b><u><a href="https://discord.gg/PEgP3y3">Official Discord</a></u></b>
 
 Features
