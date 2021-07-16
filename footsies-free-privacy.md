@@ -1,16 +1,16 @@
 ---
 layout: page
 title: FOOTSIES Privacy Policy
-permalink: /footsies-rollback-privacy/
+permalink: /footsies-free-privacy/
 ---
  <head> <title>Privacy Policy</title> 
  <style>body{font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; padding:1em;}</style>
  </head> 
  <body><h2>Privacy Policy</h2> 
 	<p>
-	  HiFight built the FOOTSIES Rollback Edition app as
-	  a Commercial app. This SERVICE is provided by
-	  HiFight  and is intended for use as
+	  HiFight built the FOOTSIES Free Edition app as
+	  an Ad Supported app. This SERVICE is provided by
+	  HiFight at no cost and is intended for use as
 	  is.
 	</p> <p>
 	  This page is used to inform visitors regarding my
@@ -25,7 +25,7 @@ permalink: /footsies-rollback-privacy/
 	</p> <p>
 	  The terms used in this Privacy Policy have the same meanings
 	  as in our Terms and Conditions, which is accessible at
-	  FOOTSIES Rollback Edition unless otherwise defined in this Privacy Policy.
+	  FOOTSIES Free Edition unless otherwise defined in this Privacy Policy.
 	</p> <p><strong>Information Collection and Use</strong></p> <p>
 	  For a better experience, while using our Service, I
 	  may require you to provide us with certain personally
@@ -105,3 +105,4 @@ permalink: /footsies-rollback-privacy/
 	  If you have any questions or suggestions about my
 	  Privacy Policy, do not hesitate to contact me at hifight.th@gmail.com.
 	</p>
+      
