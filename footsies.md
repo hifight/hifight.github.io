@@ -25,6 +25,10 @@ The animation in this game are, obviously, heavily inspired by the most iconic y
 <h3>FOOTSIES Rollback Edition</h3> 
 <b><u><a href="https://store.steampowered.com/app/1344740/FOOTSIES_Rollback_Edition/">Steam</a></u></b>
 
+<b><u><a href="https://apps.apple.com/us/app/footsies-rollback-edition/id1576368371">iOS (Full)</a></u></b>
+
+<b><u><a href="https://apps.apple.com/us/app/footsies-lite-edition/id1576618083">iOS (Free)</a></u></b>
+
 <b><u><a href="https://play.google.com/store/apps/details?id=com.HiFight.FOOTSIES_Rollback">Google Play (Full)</a></u></b>
 
 <b><u><a href="https://play.google.com/store/apps/details?id=com.HiFight.FOOTSIES">Google Play (Free)</a></u></b>
@@ -43,7 +47,7 @@ Features
 - Training mode
 - Command list with frame data
 - Hitbox viewer
-- Hit Confirm and Whiff Punish Minigames
+- Hit Confirm, Whiff Punish, and Parry Minigames
 - Character Customization
 
 <hr/>
